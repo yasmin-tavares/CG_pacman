@@ -1,9 +1,9 @@
 Basta executar o arquivo index 
-os comandos s„o:
+os comandos s√£o:
 w anda pra frente 
-s anda pra tr·s 
+s anda pra tr√°s 
 a gira pra esquerda
 d gira pra direita 
 l troca a luminosidade
 p pausa o jogo e entra em orbit
-teclas 1 e 2 alternam no modo de c‚mera 
+teclas 1 e 2 alternam no modo de c√¢mera 
