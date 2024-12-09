@@ -36,19 +36,6 @@ var criar_parede = (function () {
 })();
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
 
-/* ---------------------------------------------------------- RENDERIZAÇÃO ----------------------------------------------------------- */
-
-var criar_Renderer = function () {
-  var renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.setClearColor("black", 1.0);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  var c = document.getElementById("gameCanvas");
-  c.appendChild(renderer.domElement);
-
-  return renderer;
-};
-
-/* ----------------------------------------------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------- CRIANDO CENA ------------------------------------------------------- */
 var light;
 var lightOnOff = true;
