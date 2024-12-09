@@ -35,53 +35,7 @@ var criar_parede = (function () {
   };
 })();
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------------------------ CRIANDO PÍLULAS ------------------------------------------------------ */
 
-var criar_pilulas = (function () {
-  // variável que recebe a função de criar pílulas
-  var pilulas_comunsGeometry = new THREE.SphereGeometry(pilulas_comuns_RADIUS); // cria a bolinha da pílula
-  var pilulas_comunsMaterial = new THREE.MeshPhongMaterial({ color: 0xffdab9 }); // define a cor da mesma
-
-  return function () {
-    // função para criar a pílula
-    var pilulas_comuns = new THREE.Mesh(
-      pilulas_comunsGeometry,
-      pilulas_comunsMaterial
-    ); // recebe cada pílula criada
-    pilulas_comuns.pilulascomuns = true; // se houver uma pílula criada
-
-    return pilulas_comuns; // retorna cada pílula formando o caminho
-  };
-})();
-
-/* ----------------------------------------------------------------------------------------------------------------------------------- */
-
-/* ------------------------------------------------------ CRIANDO PÍLULAS ESPECIAIS -------------------------------------------------- */
-
-var criar_pilulas_especiais = (function () {
-  // variável que recebe a função de criar pílulas especiais
-  var pilulas_especiaisGeometry = new THREE.SphereGeometry(
-    pilulas_especiais_RADIUS,
-    12,
-    8
-  ); // cria a bolinha da pílula
-  var pilulas_especiaisMaterial = new THREE.MeshPhongMaterial({
-    color: 0xffdab9,
-  }); // define a cor da mesma
-
-  return function () {
-    // função para criar a pílula especial
-    var pilulas_especiais = new THREE.Mesh(
-      pilulas_especiaisGeometry,
-      pilulas_especiaisMaterial
-    ); // recebe cada pílula criada
-    pilulas_especiais.pilulasespeciais = true; // se houver uma pílula criada
-
-    return pilulas_especiais; // retorna cada pílula
-  };
-})();
-
-/* ----------------------------------------------------------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------- RENDERIZAÇÃO ----------------------------------------------------------- */
 
 var criar_Renderer = function () {
