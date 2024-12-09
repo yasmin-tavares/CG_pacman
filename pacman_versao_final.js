@@ -36,48 +36,6 @@ var criar_parede = (function () {
 })();
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------- CRIANDO CENA ------------------------------------------------------- */
-var light;
-var lightOnOff = true;
-var criar_cena = function () {
-  var cena = new THREE.Scene();
-
-  // Add lighting
-  cena.add(new THREE.AmbientLight(0x888888));
-  light = new THREE.SpotLight("white", 0.5);
-  light.position.set(0, 0, 50);
-
-  //if (lightOnOff == false){
-  cena.add(light);
-  //} else {
-  //cena.remove(light);
-  //}
-
-  return cena;
-};
-
-/* ----------------------------------------------------------------------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------- Câmera 2 ----------------------------------------------------- */
-
-function camera2(cam, pacman) {
-  if (key1 & !camera_player) {
-    camera_player = true;
-  }
-
-  if (key2 & camera_player) {
-    camera_player = false;
-    var p = pacman.position;
-    cam.position.x = p.x;
-    cam.position.y = p.y;
-    cam.position.z = p.z + 35;
-    cam.up.copy(UP);
-    cam.lookAt(p);
-  }
-}
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-
 /* ---------------------------------------------------- CRIANDO O PAC-MAN ------------------------------------------------------ */
 var criar_pacman = (function () {
   var pacmanGeometries = [];
